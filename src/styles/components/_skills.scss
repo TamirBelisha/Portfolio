@@ -1,0 +1,167 @@
+.skills-container {
+    min-height: 100vh;
+    margin-left: 40px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .section-tag {
+        position: relative;
+
+        &::before {
+            content: "<section>";
+            @include htmlTag;
+            top: -30px;
+            left: -28px;
+        }
+    }
+    .section-closing-tag {
+        position: relative;
+        &::before {
+            content: "</section>";
+            @include htmlTag;
+            bottom: -40px;
+            left: -28px;
+        }
+    }
+
+    .my-skills {
+        width: 50%;
+        h2 {
+            @include secondaryHeader();
+
+            &::before {
+                content: "<h2>";
+                @include htmlTag;
+                top: -1rem;
+                left: -1rem;
+            }
+            &::after {
+                content: "</h2>";
+                @include htmlTag;
+                bottom: -1.3rem;
+                left: -1rem;
+            }
+
+        }
+
+        p {
+            color: #fff;
+            font-family: noto-sans-light-italic;
+            font-size: 18px;
+        }
+        .p-tag {
+            position: relative;
+            &::before {
+                content: "<p>";
+                @include htmlTag;
+                top: -1rem;
+                left: -1rem;
+            }
+        }
+        .p-closing-tag {
+            position: relative;
+            &::after {
+                content: "</p>";
+                @include htmlTag;
+                bottom: -1.3rem;
+                left: -1rem;
+            }
+        }
+    }
+
+    .skills-preview {
+        font-family: noto-sans-light;
+        font-size: 24px;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        height: fit-content;
+        width: 50%;
+
+        .technologies {
+            width: 100%;
+            @include secondaryHeader();
+            p {
+                &::before {
+                    content: "<h2>";
+                    @include htmlTag;
+                    top: -1rem;
+                    left: calc(50% - 170px);
+                }
+                &::after {
+                    content: "</h2>";
+                    @include htmlTag;
+                    bottom: -1rem;
+                    right: calc(50% - 180px);
+                }
+            }
+        }
+
+        div {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            width: fit-content;
+        }
+        .vue {
+            position: relative;
+            &::before {
+                content: "<div>";
+                @include htmlTag;
+                top: -1rem;
+                left: 1rem;
+            }
+            p {
+                color: #42b883;
+                border-bottom: 1px solid #35495e;
+            }
+        }
+        .react p {
+            color: #00d8ff;
+            border-bottom: 1px solid #00d8ff;
+        }
+        .html p {
+            color: #e34f26;
+            border-bottom: 1px solid #e34f26;
+            &.javascript {
+                color: #f7df1e;
+                border-bottom: 1px solid #f7df1e;
+            }
+            &.sass {
+                color: #cc6699;
+                border-bottom: 1px solid #cc6699;
+            }
+        }
+        .angular p {
+            color: #b52e31;
+            border-bottom: 1px solid #b52e31;
+        }
+        .node p {
+            color: #6cc24a;
+            border-bottom: 1px solid #6cc24a;
+        }
+        .db {
+            position: relative;
+            &::after {
+                content: "</div>";
+                @include htmlTag;
+                bottom: -1rem;
+                right: 1rem;
+            }
+            .mongo {
+                color: #589636;
+                border-bottom: 1px solid #589636;
+            }
+            .sql {
+                color: #f29111;
+                border-bottom: 1px solid #00758f;
+            }
+        }
+    }
+}

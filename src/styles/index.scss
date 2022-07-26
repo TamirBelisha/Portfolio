@@ -1,0 +1,23 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+
+// Basics
+@import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/animations";
+
+// Components
+@import "components/app";
+@import "components/hero";
+@import "components/navbar";
+@import "components/about";
+@import "components/skills";
+@import "components/projects";
+@import "components/contact";
+
+
+// Media
+@import "basics/layout";

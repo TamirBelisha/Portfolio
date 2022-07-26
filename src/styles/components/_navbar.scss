@@ -1,0 +1,105 @@
+.navbar {
+    background-color: $darkBg;
+    flex: 0.4;
+    height: 100%;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all 600ms;
+    color: $mainClr;
+    font-family: lobster;
+    letter-spacing: 1px;
+    position: fixed;
+    left: 0;
+
+    &:hover {
+        background-color: darken($color: $darkBg, $amount: 12%);
+        color: #fff;
+
+        .l-bottom {
+            display: inline-block;
+            border-right: 60px solid $borderLight2;
+            z-index: 1;
+        }
+        .r-bottom {
+            display: inline-block;
+            border-left: 60px solid $mainClr;
+        }
+    }
+
+    a {
+        transition: all 300ms;
+        border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+        text-shadow: 0px 0px 9px #0a5c8d, -7px 7px 20px rgba(5, 48, 74, 0.32), -1px -1px 4px rgba(17, 165, 255, 0.62);
+        border-bottom: 1px solid $borderLight;
+    }
+
+    .logo-box {
+        font-size: 60px;
+        position: fixed;
+        top: 33px;
+        color: $mainBg;
+        z-index: 2;
+        transition: all 1s;
+        transform: translateX(-1px);
+        cursor: pointer;
+        span {
+            transition: all 1s;
+            color: $mainBg;
+        }
+        a {
+            border-bottom: none;
+            &:hover {
+                text-shadow: none;
+                border-bottom: none;
+            }
+        }
+    }
+
+    .triangle {
+        position: fixed;
+        top: 7px;
+
+        border-bottom: 2px solid $borderLight2;
+        border-radius: 50%;
+        height: 170px;
+        width: 148px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-35px);
+    }
+
+    .l-bottom {
+        display: inline-block;
+        border-bottom: 110px solid transparent;
+        border-right: 60px solid $mainClr;
+        border-top: 50px solid transparent;
+        transition: all 1s;
+        transform: translateY(35px);
+    }
+    .r-bottom {
+        display: inline-block;
+        border-bottom: 110px solid transparent;
+        border-left: 60px solid $borderLight2;
+        border-top: 50px solid transparent;
+        transition: all 1s;
+        transform: translateY(35px);
+    }
+    .links-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        position: fixed;
+        bottom: 2rem;
+        font-size: 37px;
+    }
+}

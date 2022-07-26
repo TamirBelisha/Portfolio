@@ -1,0 +1,82 @@
+.about {
+    min-height: 100vh;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .article-tag {
+        position: relative;
+        &::before {
+            content: "<article>";
+            @include htmlTag;
+            top: -30px;
+            left: -28px;
+        }
+    }
+    .article-closing-tag {
+        position: relative;
+        &::before {
+            content: "</article>";
+            @include htmlTag;
+            bottom: -40px;
+            left: -28px;
+        }
+    }
+
+    h2 {
+        @include secondaryHeader();
+
+        &::before {
+            content: "<h2>";
+            @include htmlTag;
+            top: -1rem;
+            left: -1rem;
+        }
+        &::after {
+            content: "</h2>";
+            @include htmlTag;
+            bottom: -1.3rem;
+            left: -1rem;
+        }
+    }
+
+    p {
+        font-family: noto-sans-light-italic;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .p1,
+    .p2,
+    .p3 {
+        width: 50%;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    .p1::before {
+        content: "<p>";
+        @include htmlTag;
+        top: -1.5rem;
+        left: -1rem;
+    }
+
+    a {
+        color: $borderLight;
+        font-family: noto-sans-light;
+        transition: all 300ms;
+        position: relative;
+        width: fit-content;
+
+        &:hover {
+            color: lighten($color: $borderLight, $amount: 25%);
+        }
+        &::after {
+            content: "</p>";
+            @include htmlTag;
+            bottom: -1.5rem;
+            left: -1rem;
+        }
+    }
+}
