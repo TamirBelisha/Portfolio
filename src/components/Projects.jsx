@@ -43,7 +43,7 @@ export default function Projects({ rubberBand }) {
     name: 'Blogin',
     description: 'Pixel-perfect excersice. Written as part of CSS workshop, with high attention to the details and responsive design.',
     type: 'Web design',
-    tools: ['HTML','CSS'],
+    tools: ['HTML', 'CSS'],
     img: bloginPreview,
     url: 'https://tamirbelisha.github.io/blogin/',
   }
@@ -51,7 +51,7 @@ export default function Projects({ rubberBand }) {
     name: 'Meme Generator',
     description: 'Second sprint of the coding course, written using vanilla JS and Canvas element. i18n support for Hebrew.',
     type: 'Front-end',
-    tools: ['HTML','CSS','Javascript'],
+    tools: ['HTML', 'CSS', 'Javascript'],
     img: memeGeneratorPreview,
     url: 'https://tamirbelisha.github.io/meme-generator/#',
   }
