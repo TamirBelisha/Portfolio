@@ -58,6 +58,10 @@
             overflow: hidden;
             border-radius: 1rem;
 
+            &.trellox {
+                box-shadow: 0px 0px 8px 2px #127ab8;
+            }
+
             img {
                 max-width: 100%;
                 transition: all 0.6s;
@@ -124,9 +128,9 @@
         font-family: noto-sans-light;
         font-size: 1.2rem;
         overflow: hidden;
-        
+
         img {
-            width: 50vw
+            width: 50vw;
         }
 
         .project-details {
@@ -157,7 +161,7 @@
     .screen-overlay {
         position: fixed;
         inset: 0;
-        background-image: url('../../assets/imgs/overlay.png');
+        background-image: url("../../assets/imgs/overlay.png");
         opacity: 0.4;
         transition: all 0.4s;
     }

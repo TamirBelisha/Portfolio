@@ -42,7 +42,6 @@
                 bottom: -1.3rem;
                 left: -1rem;
             }
-
         }
 
         p {
@@ -109,7 +108,7 @@
         p {
             width: fit-content;
         }
-        .vue {
+        .vue-tag {
             position: relative;
             &::before {
                 content: "<div>";
@@ -117,12 +116,12 @@
                 top: -1rem;
                 left: 1rem;
             }
-            p {
-                color: #42b883;
-                border-bottom: 1px solid #35495e;
-            }
         }
-        .react p {
+        .vue {
+            color: #42b883;
+            border-bottom: 1px solid #35495e;
+        }
+        .react {
             color: #00d8ff;
             border-bottom: 1px solid #00d8ff;
         }
@@ -138,7 +137,7 @@
                 border-bottom: 1px solid #cc6699;
             }
         }
-        .angular p {
+        .angular {
             color: #b52e31;
             border-bottom: 1px solid #b52e31;
         }
@@ -147,13 +146,6 @@
             border-bottom: 1px solid #6cc24a;
         }
         .db {
-            position: relative;
-            &::after {
-                content: "</div>";
-                @include htmlTag;
-                bottom: -1rem;
-                right: 1rem;
-            }
             .mongo {
                 color: #589636;
                 border-bottom: 1px solid #589636;
@@ -162,6 +154,31 @@
                 color: #f29111;
                 border-bottom: 1px solid #00758f;
             }
+            .dynamo {
+                color: #4259dc;
+                border-bottom: 1px solid #3435ba;
+            }
+        }
+        .devops-tag {
+            position: relative;
+            &::after {
+                content: "</div>";
+                @include htmlTag;
+                bottom: -1.5rem;
+                right: 0;
+            }
+        }
+        .aws {
+            color: #fff;
+            border-bottom: 1px solid #f79400;
+        }
+        .nginx {
+            color: #008f38;
+            border-bottom: 1px solid #008f38;
+        }
+        .docker {
+            color: #2496ed;
+            border-bottom: 1px solid #2496ed;
         }
     }
 }

@@ -6,19 +6,15 @@ import NavBar from './NavBar'
 import Projects from './Projects'
 import Skills from './Skills'
 
-export default function Main({rubberBand}) {
-    const logRub = () => {
-        console.log(rubberBand);
-    }
-    logRub()
+export default function Main({ rubberBand }) {
   return (
     <div>
-        <NavBar/>
-        <Hero rubberBand={rubberBand} />
-        <About rubberBand={rubberBand} />
-        <Skills rubberBand={rubberBand} />
-        <Projects rubberBand={rubberBand} />
-        <Contact rubberBand={rubberBand} />
+      <NavBar />
+      <Hero rubberBand={rubberBand} />
+      <About rubberBand={rubberBand} />
+      <Skills rubberBand={rubberBand} />
+      <Projects rubberBand={rubberBand} />
+      <Contact rubberBand={rubberBand} />
     </div>
   )
 }

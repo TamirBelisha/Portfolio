@@ -1,19 +1,31 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import React from 'react'
 
-export default function About({rubberBand}) {
+export default function About({ rubberBand }) {
   const aboutHeader = 'Little about me'
   const lettersArray = aboutHeader.split('')
   return (
     <article className="about">
       <div className="article-tag"></div>
-      <h2>{lettersArray.map(l => {
-        if (l === ' ') return <span style={{display: 'inline'}}> </span>
-        else return <span onMouseOver={rubberBand}>{l}</span>
-      })}</h2>
+      <h2>
+        {lettersArray.map((l, idx) => {
+          if (l === ' ')
+            return (
+              <span key={idx} style={{ display: 'inline' }}>
+                {' '}
+              </span>
+            )
+          else
+            return (
+              <span key={idx} onMouseOver={rubberBand}>
+                {l}
+              </span>
+            )
+        })}
+      </h2>
       <div className="p1">
         <p>
-          My name is Tamir Belisha, front-end / full-stack developer located in Jerusalem, IL.
+          My name is Tamir Belisha, full-stack developer located in Tel Aviv, IL.
           <br />
           Since I were young, I had this passion for computers and internet, and a big dream to establish an innovative startup using the most advanced technologies.{' '}
         </p>

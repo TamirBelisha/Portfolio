@@ -16,6 +16,19 @@
     position: fixed;
     left: 0;
 
+    &.hide {
+        background-color: unset;
+        a:not(:first-child) {
+            display: none;
+        }
+        .links-container {
+            display: none;
+        }
+        &:hover {
+            background-color: unset;
+        }
+    }
+
     &:hover {
         background-color: darken($color: $darkBg, $amount: 12%);
         color: #fff;
@@ -24,10 +37,16 @@
             display: inline-block;
             border-right: 60px solid $borderLight2;
             z-index: 1;
+            @media (max-width: 840px) {
+                border-right: 45px solid $borderLight2;
+            }
         }
         .r-bottom {
             display: inline-block;
             border-left: 60px solid $mainClr;
+            @media (max-width: 840px) {
+                border-left: 45px solid $mainClr;
+            }
         }
     }
 
@@ -61,6 +80,10 @@
                 border-bottom: none;
             }
         }
+
+        @media (max-width: 840px) {
+            font-size: 40px;
+        }
     }
 
     .triangle {
@@ -75,6 +98,11 @@
         align-items: center;
         justify-content: center;
         transform: translateY(-35px);
+        @media (max-width: 840px) {
+            height: 150px;
+            width: 128px;
+            top: -3px;
+        }
     }
 
     .l-bottom {
@@ -84,6 +112,11 @@
         border-top: 50px solid transparent;
         transition: all 1s;
         transform: translateY(35px);
+        @media (max-width: 840px) {
+            border-bottom: 78px solid transparent;
+            border-right: 45px solid $mainClr;
+            border-top: 37px solid transparent;
+        }
     }
     .r-bottom {
         display: inline-block;
@@ -92,6 +125,11 @@
         border-top: 50px solid transparent;
         transition: all 1s;
         transform: translateY(35px);
+        @media (max-width: 840px) {
+            border-bottom: 78px solid transparent;
+            border-left: 45px solid $borderLight2;
+            border-top: 37px solid transparent;
+        }
     }
     .links-container {
         display: flex;

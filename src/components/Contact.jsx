@@ -17,23 +17,53 @@ export default function Contact({ rubberBand }) {
       [field]: value,
     }))
   }
-  const onSendMessage = (ev) => {
+  const onSendMessage = async (ev) => {
     ev.preventDefault()
-    console.log(message)
+    try {
+      await window.Email.send({
+        SecureToken: process.env.REACT_APP_SMTPJS_KEY,
+        To: 'tamirbelisha@gmail.com',
+        From: 'tamirbelisha@gmail.com',
+        Subject: `${message.name} Has messaged you through your portfolio`,
+        Body: `<h2>${message.subject}</h2>\n<p style="font-size: 20px">${message.message}</p>\n<p style="font-size: 16px; font-weight: bold">${message.name}'s email address is ${message.email}</p>`,
+      })
+      setMessage(() => ({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      }))
+    } catch (err) {
+      console.log('error', err)
+    }
   }
   return (
     <div className="contact">
       <h2>
-        {lettersArray.map((l) => {
-          if (l === ' ') return <span style={{ display: 'inline' }}> </span>
-          else return <span onMouseOver={rubberBand}>{l}</span>
+        {lettersArray.map((l, idx) => {
+          if (l === ' ')
+            return (
+              <span key={idx} style={{ display: 'inline' }}>
+                {' '}
+              </span>
+            )
+          else
+            return (
+              <span key={idx} onMouseOver={rubberBand}>
+                {l}
+              </span>
+            )
         })}
       </h2>
-      <p className="my-mail">Mail: <span><a href="mailto:tamirbelisha@gmail.com">tamirbelisha@gmail.com</a></span>
-      <br />
-      Tel: <span>+972-54-263-1200</span>
-      <br />
-      <span className="my-options">I'm open to collaborations, freelance projects and frontend / fullstack job offer.</span>
+      <p className="my-mail">
+        Mail:{' '}
+        <span>
+          <a href="mailto:tamirbelisha@gmail.com">tamirbelisha@gmail.com</a>
+        </span>
+        <br />
+        Tel: <span>+972-54-263-1200</span>
+        <br />
+        <span className="my-options">I'm open to collaborations, freelance projects and job offers.</span>
       </p>
       <form onSubmit={onSendMessage}>
         <div>
@@ -46,9 +76,9 @@ export default function Contact({ rubberBand }) {
 
         <textarea className="message" onChange={handleChange} placeholder="Message" value={message.message} type="message" name="message" id="message" required />
 
-        <div class="btn-box box-3">
+        <div className="btn-box box-3">
           <button>
-            <div class="btn btn-three">
+            <div className="btn btn-three">
               <span>SEND MESSAGE</span>
             </div>
           </button>

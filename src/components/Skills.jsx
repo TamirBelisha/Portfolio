@@ -8,11 +8,21 @@ export default function Skills({ rubberBand }) {
   return (
     <section className="skills-container">
       <div className="my-skills">
-      <section className="section-tag"></section>
+        <section className="section-tag"></section>
         <h2>
-          {skillsLettersArray.map((l) => {
-            if (l === ' ') return <span style={{ display: 'inline' }}> </span>
-            else return <span onMouseOver={rubberBand}>{l}</span>
+          {skillsLettersArray.map((l, idx) => {
+            if (l === ' ')
+              return (
+                <span key={idx} style={{ display: 'inline' }}>
+                  {' '}
+                </span>
+              )
+            else
+              return (
+                <span key={idx} onMouseOver={rubberBand}>
+                  {l}
+                </span>
+              )
           })}
         </h2>
         <p className="p-tag">
@@ -22,18 +32,58 @@ export default function Skills({ rubberBand }) {
         </p>
         <br />
         <p className="p-closing-tag">Personal skills - problem solving, team work, adaptability, goals achiever, fast & self learner, independent, sociable, honest, creative.</p>
-      <section className="section-closing-tag"></section>
+        <section className="section-closing-tag"></section>
       </div>
       <div className="skills-preview">
         <div className="technologies">
           <p>
-            {technoLettersArray.map((l) => {
-              if (l === ' ') return <span style={{ display: 'inline' }}> </span>
-              else return <span onMouseOver={rubberBand}>{l}</span>
+            {technoLettersArray.map((l, idx) => {
+              if (l === ' ')
+                return (
+                  <span key={idx} style={{ display: 'inline' }}>
+                    {' '}
+                  </span>
+                )
+              else
+                return (
+                  <span key={idx} onMouseOver={rubberBand}>
+                    {l}
+                  </span>
+                )
             })}
           </p>
         </div>
-        <div className="vue">
+        <div className="vue-tag">
+          <p className="vue">Vue.js</p>
+          <p className="react">React.js</p>
+          <p className="angular">Angular.js</p>
+        </div>
+        <div>
+          <p className="vue">Vuex</p>
+          <p className="react">Redux</p>
+          <p className="angular">NgRx</p>
+        </div>
+        <div className="html">
+          <p className="javascript">Javascript</p>
+          <p>HTML5</p>
+          <p className="sass">CSS & SASS</p>
+        </div>
+        <div className="node">
+          <p>Node.js</p>
+          <p>Express.js</p>
+          <p>Socket.io</p>
+        </div>
+        <div className="db">
+          <p className="dynamo">DynamoDB</p>
+          <p className="mongo">MongoDB</p>
+          <p className="sql">MySQL</p>
+        </div>
+        <div className="devops-tag">
+          <p className="aws">AWS</p>
+          <p className="nginx">Nginx</p>
+          <p className="docker">Docker</p>
+        </div>
+        {/* <div className="vue">
           <p>Vue.js</p>
           <p>Vuex</p>
           <p>Vite</p>
@@ -59,7 +109,8 @@ export default function Skills({ rubberBand }) {
         <div className="db">
           <p className="mongo">MongoDB</p>
           <p className="sql">MySQL</p>
-        </div>
+          <p className="dynamo">DynamoDB</p>
+        </div> */}
       </div>
     </section>
   )

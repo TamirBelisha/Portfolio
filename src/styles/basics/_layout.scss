@@ -67,6 +67,31 @@
             font-size: 1.7rem;
         }
     }
+    .navbar {
+        position: fixed;
+        right: 0;
+        left: unset;
+        z-index: 10;
+    }
+    body {
+        padding-left: 0;
+    }
+    .contact {
+        form {
+            width: 100%;
+        }
+    }
+    .projects {
+        .modal {
+            width: 80%;
+            img {
+                width: 100%;
+            }
+            .project-details {
+                padding: 0 20px 20px 20px;
+            }
+        }
+    }
 }
 @media (max-width: 724px) {
     .hero {
@@ -74,6 +99,46 @@
         p {
             font-size: 1.4rem;
         }
+        margin-bottom: 3rem;
+    }
+    .about {
+        margin-bottom: 5rem;
+    }
+}
+@media (max-width: 460px) {
+    .hero {
+        font-size: 24px;
+        p {
+            font-size: 1.4rem;
+        }
+    }
+    .about,
+    .contact,
+    .my-skills {
+        h2 {
+            font-size: 50px !important;
+        }
+    }
+    .projects {
+        h1 {
+            font-size: 60px !important;
+            margin-block-end: 40px;
+            margin-inline-start: -20px;
+        }
+        .modal {
+            width: 100%;
+        }
+    }
+    .skills-preview {
+        justify-content: space-evenly;
+        .technologies {
+            font-size: 50px !important;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .skills-preview {
+        width: 90% !important;
     }
 }
 @media (max-width: 1188px) {

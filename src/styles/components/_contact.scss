@@ -1,7 +1,7 @@
 .contact {
     min-height: 100vh;
     margin: 0 40px;
-    margin-top: 1rem;
+    padding-top: 1rem;
 
     h2 {
         @include secondaryHeader();
@@ -96,7 +96,7 @@
         .message {
             resize: none;
             overflow: hidden;
-            height: 200px;
+            height: 160px;
         }
         @include coolBtn();
         .btn-three {

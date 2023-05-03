@@ -21,7 +21,7 @@ export default function Projects({ rubberBand }) {
     type: 'End to end',
     tools: ['Vue.js', 'Vuex', 'Node.js', 'Express', 'Socket.io', 'MongoDB', 'PWA', 'SASS'],
     img: trelloxPreview,
-    url: 'https://trelloxx.herokuapp.com/#/',
+    url: 'https://trellox-api.onrender.com/#/',
   }
   const misterBTCAngularDetails = {
     name: 'MisterBITCoin',
@@ -91,13 +91,23 @@ export default function Projects({ rubberBand }) {
   return (
     <main className="projects">
       <h1>
-        {projectsLettersArray.map((l) => {
-          if (l === ' ') return <span style={{ display: 'inline' }}> </span>
-          else return <span onMouseOver={rubberBand}>{l}</span>
+        {projectsLettersArray.map((l, idx) => {
+          if (l === ' ')
+            return (
+              <span key={idx} style={{ display: 'inline' }}>
+                {' '}
+              </span>
+            )
+          else
+            return (
+              <span key={idx} onMouseOver={rubberBand}>
+                {l}
+              </span>
+            )
         })}
       </h1>
       <section className="cards-container">
-        <div onMouseLeave={scaleUpLeave} onMouseEnter={scaleUp} className="card">
+        <div onMouseLeave={scaleUpLeave} onMouseEnter={scaleUp} className="card trellox">
           <img src={trelloxPreview} alt="" />
           <div className="overlay"></div>
           <div onClick={(ev) => toggleModal('trellox', ev)} className="clickme">
@@ -135,13 +145,13 @@ export default function Projects({ rubberBand }) {
       </section>
       <div ref={modalRef} hidden={!modalProject} className={modalProject ? 'slit-in-horizontal modal' : 'modal'}>
         {modalProject && (
-          <a href={modalProject.url} target="_blank">
+          <a href={modalProject.url} target="_blank" rel="noreferrer">
             <img src={modalProject.img} alt="" />
           </a>
         )}
         <div className="project-details">
           {modalProject && (
-            <a href={modalProject.url} target="_blank">
+            <a href={modalProject.url} target="_blank" rel="noreferrer">
               <h2 className="proj-name">{modalProject.name}</h2>
             </a>
           )}
@@ -160,9 +170,9 @@ export default function Projects({ rubberBand }) {
           )}
         </div>
         {modalProject && (
-          <div class="btn-box box-3">
-            <a href={modalProject.url} target="_blank">
-              <div class="btn btn-three">
+          <div className="btn-box box-3">
+            <a href={modalProject.url} target="_blank" rel="noreferrer">
+              <div className="btn btn-three">
                 <span>TO THE PROJECT</span>
               </div>
             </a>
