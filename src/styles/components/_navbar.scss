@@ -18,6 +18,7 @@
 
     &.hide {
         background-color: unset;
+        z-index: 0;
         a:not(:first-child) {
             display: none;
         }

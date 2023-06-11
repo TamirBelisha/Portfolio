@@ -2,8 +2,8 @@ import React, { useRef, useState } from 'react'
 import trelloxPreview from '../assets/imgs/Trellox_preview2.png'
 import misterBTCAngularPreview from '../assets/imgs/Misterbitcoin_angular.png'
 import misterBTCReactPreview from '../assets/imgs/Misterbitcoin_react.png'
-import bloginPreview from '../assets/imgs/Blogin_preview.png'
-import memeGeneratorPreview from '../assets/imgs/MemeGenerator_preview.png'
+// import bloginPreview from '../assets/imgs/Blogin_preview.png'
+// import memeGeneratorPreview from '../assets/imgs/MemeGenerator_preview.png'
 
 export default function Projects({ rubberBand }) {
   const modalRef = useRef(null)
@@ -75,12 +75,12 @@ export default function Projects({ rubberBand }) {
       case 'misterBTCReact':
         setModalProject(misterBTCReactDetails)
         break
-      case 'blogin':
-        setModalProject(bloginDetails)
-        break
-      case 'memeGenerator':
-        setModalProject(memeGeneratorDetails)
-        break
+      // case 'blogin':
+      //   setModalProject(bloginDetails)
+      //   break
+      // case 'memeGenerator':
+      //   setModalProject(memeGeneratorDetails)
+      //   break
 
       default:
         break
