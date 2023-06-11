@@ -1,27 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e53a747.css",
-    "main.js": "/static/js/main.172ad90f.js",
-    "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
-    "static/media/MemeGenerator_preview.png": "/static/media/MemeGenerator_preview.6035f238c9ad7e1d3599.png",
-    "static/media/Trellox_preview2.png": "/static/media/Trellox_preview2.c01f769e2f13cc8eeef2.png",
-    "static/media/Misterbitcoin_angular.png": "/static/media/Misterbitcoin_angular.912f2d7cbca67c8a9257.png",
-    "static/media/Blogin_preview.png": "/static/media/Blogin_preview.d54bf52964763ad601ca.png",
-    "static/media/NotoSans-ExtraLight.ttf": "/static/media/NotoSans-ExtraLight.73c9131923338c4f3cd4.ttf",
-    "static/media/NotoSans-SemiBold.ttf": "/static/media/NotoSans-SemiBold.99df72e26c72877cb1f9.ttf",
-    "static/media/NotoSans-Regular.ttf": "/static/media/NotoSans-Regular.eae34fa8f1e0c4c6d797.ttf",
-    "static/media/NotoSans-ExtraLightItalic.ttf": "/static/media/NotoSans-ExtraLightItalic.0d7df33224dfbecd5627.ttf",
-    "static/media/Lobster-Regular.ttf": "/static/media/Lobster-Regular.03c38496322925fec242.ttf",
-    "static/media/Misterbitcoin_react.png": "/static/media/Misterbitcoin_react.a59131b5a3dc40320fa6.png",
-    "static/media/IndieFlower-Regular.ttf": "/static/media/IndieFlower-Regular.599d26584b9afc1d20b1.ttf",
-    "static/media/LaBelleAurore-Regular.ttf": "/static/media/LaBelleAurore-Regular.bc43b15661f3e942b3f6.ttf",
-    "index.html": "/index.html",
-    "main.6e53a747.css.map": "/static/css/main.6e53a747.css.map",
-    "main.172ad90f.js.map": "/static/js/main.172ad90f.js.map",
-    "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
+    "main.css": "/Portfolio/static/css/main.978b9ad2.css",
+    "main.js": "/Portfolio/static/js/main.52a67bd3.js",
+    "static/js/787.128fc6e9.chunk.js": "/Portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/Trellox_preview2.png": "/Portfolio/static/media/Trellox_preview2.c01f769e2f13cc8eeef2.png",
+    "static/media/Misterbitcoin_angular.png": "/Portfolio/static/media/Misterbitcoin_angular.912f2d7cbca67c8a9257.png",
+    "static/media/NotoSans-ExtraLight.ttf": "/Portfolio/static/media/NotoSans-ExtraLight.73c9131923338c4f3cd4.ttf",
+    "static/media/NotoSans-SemiBold.ttf": "/Portfolio/static/media/NotoSans-SemiBold.99df72e26c72877cb1f9.ttf",
+    "static/media/NotoSans-Regular.ttf": "/Portfolio/static/media/NotoSans-Regular.eae34fa8f1e0c4c6d797.ttf",
+    "static/media/NotoSans-ExtraLightItalic.ttf": "/Portfolio/static/media/NotoSans-ExtraLightItalic.0d7df33224dfbecd5627.ttf",
+    "static/media/Lobster-Regular.ttf": "/Portfolio/static/media/Lobster-Regular.03c38496322925fec242.ttf",
+    "static/media/Misterbitcoin_react.png": "/Portfolio/static/media/Misterbitcoin_react.a59131b5a3dc40320fa6.png",
+    "static/media/IndieFlower-Regular.ttf": "/Portfolio/static/media/IndieFlower-Regular.599d26584b9afc1d20b1.ttf",
+    "static/media/LaBelleAurore-Regular.ttf": "/Portfolio/static/media/LaBelleAurore-Regular.bc43b15661f3e942b3f6.ttf",
+    "index.html": "/Portfolio/index.html",
+    "main.978b9ad2.css.map": "/Portfolio/static/css/main.978b9ad2.css.map",
+    "main.52a67bd3.js.map": "/Portfolio/static/js/main.52a67bd3.js.map",
+    "787.128fc6e9.chunk.js.map": "/Portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e53a747.css",
-    "static/js/main.172ad90f.js"
+    "static/css/main.978b9ad2.css",
+    "static/js/main.52a67bd3.js"
   ]
 }
