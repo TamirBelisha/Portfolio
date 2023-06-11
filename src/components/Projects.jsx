@@ -39,22 +39,22 @@ export default function Projects({ rubberBand }) {
     img: misterBTCReactPreview,
     url: 'https://tamirbelisha.github.io/mister-bitcoin/#/',
   }
-  const bloginDetails = {
-    name: 'Blogin',
-    description: 'Pixel-perfect excersice. Written as part of CSS workshop, with high attention to the details and responsive design.',
-    type: 'Web design',
-    tools: ['HTML', 'CSS'],
-    img: bloginPreview,
-    url: 'https://tamirbelisha.github.io/blogin/',
-  }
-  const memeGeneratorDetails = {
-    name: 'Meme Generator',
-    description: 'Second sprint of the coding course, written using vanilla JS and Canvas element. i18n support for Hebrew.',
-    type: 'Front-end',
-    tools: ['HTML', 'CSS', 'Javascript'],
-    img: memeGeneratorPreview,
-    url: 'https://tamirbelisha.github.io/meme-generator/#',
-  }
+  // const bloginDetails = {
+  //   name: 'Blogin',
+  //   description: 'Pixel-perfect excersice. Written as part of CSS workshop, with high attention to the details and responsive design.',
+  //   type: 'Web design',
+  //   tools: ['HTML', 'CSS'],
+  //   img: bloginPreview,
+  //   url: 'https://tamirbelisha.github.io/blogin/',
+  // }
+  // const memeGeneratorDetails = {
+  //   name: 'Meme Generator',
+  //   description: 'Second sprint of the coding course, written using vanilla JS and Canvas element. i18n support for Hebrew.',
+  //   type: 'Front-end',
+  //   tools: ['HTML', 'CSS', 'Javascript'],
+  //   img: memeGeneratorPreview,
+  //   url: 'https://tamirbelisha.github.io/meme-generator/#',
+  // }
 
   const scaleUp = (ev) => {
     ev.target.nextSibling.className = 'clickme scale-up-hor-center'
@@ -128,7 +128,7 @@ export default function Projects({ rubberBand }) {
             View project
           </div>
         </div>
-        <div onMouseLeave={scaleUpLeave} onMouseEnter={scaleUp} className="card">
+        {/* <div onMouseLeave={scaleUpLeave} onMouseEnter={scaleUp} className="card">
           <img src={bloginPreview} alt="" />
           <div className="overlay"></div>
           <div onClick={(ev) => toggleModal('blogin', ev)} className="clickme">
@@ -141,7 +141,7 @@ export default function Projects({ rubberBand }) {
           <div onClick={(ev) => toggleModal('memeGenerator', ev)} className="clickme">
             View project
           </div>
-        </div>
+        </div> */}
       </section>
       <div ref={modalRef} hidden={!modalProject} className={modalProject ? 'slit-in-horizontal modal' : 'modal'}>
         {modalProject && (
